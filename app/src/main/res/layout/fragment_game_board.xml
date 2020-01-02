@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".ui.fragments.GameBoardFragment">
-
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textViewAppName"
@@ -16,9 +18,41 @@
         android:textColor="@android:color/black"
         android:textSize="21sp"
         android:textStyle="bold"
-        android:transitionName="appName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:transitionName="appName" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewPlayer1Name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/spacingMedium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:transitionName="player1Name"
+            tools:text="Player 1" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textViewPlayer2Name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/spacingMedium"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:transitionName="player2Name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textViewPlayer1Name"
+            app:layout_constraintTop_toBottomOf="@id/textViewAppName"
+            tools:text="Player 2" />
+
+    </LinearLayout>
+
+</LinearLayout>

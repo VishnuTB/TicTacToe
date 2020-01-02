@@ -5,10 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import com.area51.tictactoe.R
 
 class MainActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
     }
+
 }

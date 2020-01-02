@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:animateLayoutChanges="true"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:paddingTop="100dp"
     tools:context=".ui.fragments.PlayerNamesFragment">
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -23,7 +26,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacingMedium"
-        android:layout_marginEnd="@dimen/spacingMedium">
+        android:layout_marginEnd="@dimen/spacingMedium"
+        app:hintTextColor="@android:color/black">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextPlayer1Name"
@@ -31,7 +35,10 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:hint="@string/hint_player_1_name"
+            android:inputType="textCapWords"
             android:padding="@dimen/spacing10"
+            android:textColor="@android:color/black"
+            android:transitionName="player1Name"
             tools:text="Player 1" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -41,7 +48,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacingMedium"
-        android:layout_marginEnd="@dimen/spacingMedium">
+        android:layout_marginEnd="@dimen/spacingMedium"
+        app:hintTextColor="@android:color/black">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextPlayer2Name"
@@ -49,7 +57,10 @@
             android:layout_height="wrap_content"
             android:background="@null"
             android:hint="@string/hint_player_2_name"
+            android:inputType="textCapWords"
             android:padding="@dimen/spacing10"
+            android:textColor="@android:color/black"
+            android:transitionName="player2Name"
             tools:text="Player 2" />
 
     </com.google.android.material.textfield.TextInputLayout>
