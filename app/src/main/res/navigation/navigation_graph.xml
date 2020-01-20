@@ -22,5 +22,14 @@
         android:id="@+id/gameBoardFragment"
         android:name="com.area51.tictactoe.ui.fragments.GameBoardFragment"
         android:label="fragment_game_board"
-        tools:layout="@layout/fragment_game_board" />
+        tools:layout="@layout/fragment_game_board">
+        <argument
+            android:name="PLAYER1"
+            android:defaultValue="Player 1"
+            app:argType="string" />
+        <argument
+            android:name="PLAYER2"
+            android:defaultValue="Player 2"
+            app:argType="string" />
+    </fragment>
 </navigation>

@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <dimen name="textXSmall">13sp</dimen>
+    <dimen name="textSmall">15sp</dimen>
+    <dimen name="textMedium">18sp</dimen>
+
+    <dimen name="spacing5">5dp</dimen>
     <dimen name="spacing10">10dp</dimen>
     <dimen name="spacing15">15dp</dimen>
     <dimen name="spacing20">20dp</dimen>
 
+    <dimen name="spacingSmall">@dimen/spacing5</dimen>
     <dimen name="spacingMedium">@dimen/spacing10</dimen>
+    <dimen name="spacingLarge">@dimen/spacing15</dimen>
+
 </resources>

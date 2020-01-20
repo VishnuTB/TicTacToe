@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -12,64 +11,50 @@
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/textViewAppName"
+        style="@style/TextStyleTitleBlack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/spacingMedium"
         android:text="@string/app_name"
-        android:textColor="@android:color/black"
-        android:textSize="21sp"
-        android:textStyle="bold"
         android:transitionName="appName" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputPlayer1Name"
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextPlayer1Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacingMedium"
         android:layout_marginEnd="@dimen/spacingMedium"
-        app:hintTextColor="@android:color/black">
+        android:background="@null"
+        android:hint="@string/text_player1"
+        android:inputType="textCapWords"
+        android:padding="@dimen/spacing10"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:transitionName="player1Name"
+        tools:text="Player 1" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextPlayer1Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:hint="@string/hint_player_1_name"
-            android:inputType="textCapWords"
-            android:padding="@dimen/spacing10"
-            android:textColor="@android:color/black"
-            android:transitionName="player1Name"
-            tools:text="Player 1" />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputPlayer2Name"
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/editTextPlayer2Name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacingMedium"
+        android:layout_marginTop="@dimen/spacingMedium"
         android:layout_marginEnd="@dimen/spacingMedium"
-        app:hintTextColor="@android:color/black">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextPlayer2Name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:hint="@string/hint_player_2_name"
-            android:inputType="textCapWords"
-            android:padding="@dimen/spacing10"
-            android:textColor="@android:color/black"
-            android:transitionName="player2Name"
-            tools:text="Player 2" />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        android:background="@null"
+        android:hint="@string/text_player2"
+        android:inputType="textCapWords"
+        android:padding="@dimen/spacing10"
+        android:textColor="@android:color/black"
+        android:textColorHint="@android:color/black"
+        android:transitionName="player2Name"
+        tools:text="Player 2" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonStartGame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacingMedium"
+        android:layout_marginTop="@dimen/spacingMedium"
         android:layout_marginEnd="@dimen/spacingMedium"
         android:background="?attr/selectableItemBackground"
         android:text="@string/text_start_game"
